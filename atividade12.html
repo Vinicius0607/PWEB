@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 11</title>
+</head>
+<body>
+    <script>
+        function Retangulo(base, altura){
+            this.base = base;
+            this.altura = altura;
+            this.MostrarResultado = function() {
+                return base * altura;
+            }
+        }
+        var retangulo = new Retangulo(10, 5);
+            alert("Área do Retângulo: " + retangulo.MostrarResultado());
+
+        //parte 2 da ativ
+            class Conta {
+            constructor() {
+                this._nomeCorrentista;
+                this._banco;
+                this._numConta;
+                this._saldo;
+            }
+            setNomeCorrentista(value) {
+                this._nomeCorrentista = value;
+            }
+            getNomeCorrentista() {
+                return this._nomeCorrentista;
+            }
+            setBanco(value) {
+                this._banco = value;
+            }
+            getBanco() {
+                return this._banco;
+            }
+            setNumConta(value) {
+                this._numConta = value;
+            }
+            getNumConta() {
+                return this._numConta;
+            }
+            setSaldo(value) {
+                this._saldo = value;
+            }
+            getSaldo() {
+                return this._saldo;
+            }
+        }
+
+        
+        class ContaCorrente extends Conta{
+            constructor(){
+                super();
+                this._saldoEspec
+            }
+
+            setSaldoEspec(value) {
+                this._saldoEspec = value;
+            }
+            getSaldoEspec(){
+                return this._saldoEspec;
+            }
+        }
+
+        class Poupanca extends Conta{
+            constructor(){
+                super();
+                this._juros;
+                this._dtVencimento;
+            }
+            setJuros(value) {
+                this._juros = value;
+            }
+            getjuros(){
+                return this._juros;
+            }
+            setDtVencimento(value) {
+                this._dtVencimento = value;
+            }
+            getDtVencimento(){
+                return this._dtVencimento;
+            }
+        }
+
+        var objConta = new Conta();
+        objConta.setNomeCorrentista("Clara");
+        objConta.setBanco("Bradesco");
+        objConta.setNumConta("123456");
+        objConta.setSaldo("1500,00")
+            
+        var objContaCorrente = new ContaCorrente();
+        objContaCorrente.setSaldoEspec("500,00");
+        
+        var objPoupanca = new Poupanca();
+        objPoupanca.setJuros("5%");
+        objPoupanca.setDtVencimento("06/09/2026");
+
+        alert(`Nome= ${objConta.getNomeCorrentista()}
+        Banco= ${objConta.getBanco()}
+        NumConta= ${objConta.getNumConta()}
+        Saldo= ${objConta.getSaldo()}
+        SaldoEspec= ${objContaCorrente.getSaldoEspec()}
+        Juros= ${objPoupanca.getjuros()}
+        DTVencimento= ${objPoupanca.getDtVencimento()}`);
+
+    </script>
+</body>
+</html>
